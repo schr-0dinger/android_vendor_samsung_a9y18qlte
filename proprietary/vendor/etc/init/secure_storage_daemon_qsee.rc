@@ -14,4 +14,4 @@ on post-fs-data
     chown system system /data/vendor/secure_storage
 
 on property:vendor.sys.qseecomd.enable=true
-    start secure_storage
+    # Disabled for bring-up: required secure storage dependency is absent

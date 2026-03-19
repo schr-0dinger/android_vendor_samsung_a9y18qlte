@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<SW-Configuration>
+    <MobileData>
+        <PublicName>SM-A920F</PublicName>
+    </MobileData>
+    <OmcYn>Y</OmcYn>
+    <MultiCode>ODM</MultiCode>
+    <CustomerDataSet>
+        <CSCName>A920FODM</CSCName>
+        <CSCVersion>7CVI1</CSCVersion>
+        <NbCustomer>5</NbCustomer>
+        <CustomerData src="/Customer/BNG/customer.xml" />
+        <CustomerData src="/Customer/INS/customer.xml" />
+        <CustomerData src="/Customer/NPB/customer.xml" />
+        <CustomerData src="/Customer/NPL/customer.xml" />
+        <CustomerData src="/Customer/SLK/customer.xml" />
+    </CustomerDataSet>
+    <OmcInfo>
+        <OmcCode>
+            <CustomerCode>BNG</CustomerCode>
+            <Version>SAOMC_SM-A920F_ODM_BNG_QQ_0006</Version>
+            <CustomerEdition>ED0003</CustomerEdition>
+        </OmcCode>
+        <OmcCode>
+            <CustomerCode>INS</CustomerCode>
+            <Version>SAOMC_SM-A920F_ODM_INS_QQ_0013</Version>
+            <CustomerEdition>ED0006</CustomerEdition>
+        </OmcCode>
+        <OmcCode>
+            <CustomerCode>NPB</CustomerCode>
+            <Version>SAOMC_SM-A920F_ODM_NPB_QQ_0005</Version>
+            <CustomerEdition>ED0003</CustomerEdition>
+        </OmcCode>
+        <OmcCode>
+            <CustomerCode>NPL</CustomerCode>
+            <Version>SAOMC_SM-A920F_ODM_NPL_QQ_0005</Version>
+            <CustomerEdition>ED0003</CustomerEdition>
+        </OmcCode>
+        <OmcCode>
+            <CustomerCode>SLK</CustomerCode>
+            <Version>SAOMC_SM-A920F_ODM_SLK_QQ_0006</Version>
+            <CustomerEdition>ED0004</CustomerEdition>
+        </OmcCode>
+    </OmcInfo>
+</SW-Configuration>
