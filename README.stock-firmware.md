@@ -36,10 +36,13 @@ On stock, these files are normally provided by separate mounted partitions:
 - `/vendor/firmware-modem`
 - `/vendor/dsp`
 
+In this tree, the runtime mounts are handled by `init.target.rc` rather than active `fstab.qcom` entries.
+
 So these copies serve two purposes:
 
 - keep the exact stock payload in-tree for comparison and packaging
 - make the firmware set auditable while we continue fixing runtime mount and secure-init issues
+- provide a `vendor/firmware/a512_zap.*` fallback copy while the canonical runtime source remains `/vendor/firmware_mnt/image/a512_zap.*`
 
 ## Verification
 
