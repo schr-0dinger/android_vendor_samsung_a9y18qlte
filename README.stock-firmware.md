@@ -47,3 +47,38 @@ So these copies serve two purposes:
 ## Verification
 
 Hashes for every imported file are recorded in `stock-firmware-partitions.sha256`.
+
+## Additional stock vendor HAL imports
+
+To unblock framework bring-up past bootanimation, the following stock sensor HAL wrapper pieces were also imported from the unpacked stock vendor image:
+
+- `vendor/bin/hw/android.hardware.sensors@1.0-service`
+- `vendor/etc/init/android.hardware.sensors@1.0-service.rc`
+- `vendor/lib/hw/android.hardware.sensors@1.0-impl.so`
+- `vendor/lib64/hw/android.hardware.sensors@1.0-impl.so`
+
+These are kept alongside the existing `sensors.qti` stack so `hwservicemanager` can satisfy `android.hardware.sensors@1.0::ISensors/default` and `system_server` can finish sensorservice bring-up.
+
+## Additional stock vendor blob imports
+
+To move framework bring-up past the next HAL stalls after sensors were fixed, the following stock vendor-image blobs were imported from the unpacked repack:
+
+- `vendor/bin/hw/android.hardware.gatekeeper@1.0-service`
+- `vendor/lib/android.hidl.base@1.0.so`
+- `vendor/lib64/android.hidl.base@1.0.so`
+- `vendor/lib/libaudio_log_utils.so`
+- `vendor/lib/hw/android.hardware.soundtrigger@2.0-impl.so`
+- `vendor/lib/hw/android.hardware.soundtrigger@2.1-impl.so`
+- `vendor/lib/vendor.samsung.hardware.audio@1.0.so`
+- `vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so`
+- `vendor/lib64/vendor.samsung.hardware.audio@1.0.so`
+- `vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so`
+
+These were chosen because the bring-up logs show:
+
+- `audio.primary.sdm660.so` failing on missing `libaudio_log_utils.so`
+- soundtrigger registration failing because the `@2.0` and `@2.1` passthrough impls are absent
+- camera provider failing to resolve `android.hidl.base@1.0.so`
+- gatekeeper being declared in init plumbing, but the service binary itself not being present in the image
+
+Because this donor is an `A9200` repack rather than an exact `A920F` dump, this import set is limited to missing blobs that unblock core boot progression, instead of replacing already-present A9-specific blobs.

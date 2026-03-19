@@ -75,3 +75,17 @@ b6d17c9b43fcd247a89ae7d09d6f490bc881ae7d0bc5ceae1bc21f4fc5545c02  vendor/firmwar
 9145cbf5e2499fe7a98337f09d689137198ccb775b5d88158c39b6ceec21be61  vendor/firmware_mnt/image/cdsp.b07
 a5ae7953c93b80c43b10e12a1f5bd109650177b79dafbad1540f7acc672fdb7e  vendor/firmware_mnt/image/cdsp.mdt
 15e148599165b38f68e62302d63c87caa5f0b164deb81aa419bbb4ecf920bc4b  vendor/firmware_mnt/image/cdspr.jsn
+cc65758ae80721ff80231c57cf113b6e9f4467ef5ce736c5f2998605f53f5e66  proprietary/vendor/bin/hw/android.hardware.sensors@1.0-service
+14f88c8850b0572ada8c2702af09c6efb26a4ea2417840c74167b0cc864116dd  proprietary/vendor/etc/init/android.hardware.sensors@1.0-service.rc
+e5b414b82ae582799d850cad4ca71d7c1880f6aabae3adc6e95dae0e020c8a1a  proprietary/vendor/lib/hw/android.hardware.sensors@1.0-impl.so
+522792411e243a6085fa823ce14bcffefc1f3736bb5d74be49621084ee626bee  proprietary/vendor/lib64/hw/android.hardware.sensors@1.0-impl.so
+14165d7f9ffb6cd522211c93ea51f1fb64b8e4d2c711d8234f714e25f15423ea  proprietary/vendor/bin/hw/android.hardware.gatekeeper@1.0-service
+0330db11c183cb177729e903266c9ae7f4c26f147c6d9a30baab081d49d944bc  proprietary/vendor/lib/android.hidl.base@1.0.so
+226d507ffc4b5e502f52d81ccb0465a42419b61a2703d147633723f701302b4c  proprietary/vendor/lib64/android.hidl.base@1.0.so
+34155987b5a3a9bbe8bca1d811999b4c3cbb3674e2c4b8da11dccfe4f8a6c313  proprietary/vendor/lib/libaudio_log_utils.so
+a9f067c7a16b838eaaec0ec96a96b887b3c329416dc211cab4de73d963197311  proprietary/vendor/lib/hw/android.hardware.soundtrigger@2.0-impl.so
+c9a38a698957bd5dbd8c761cc7585b4e3ff9038bfb3e12b91cc05a35c2a04369  proprietary/vendor/lib/hw/android.hardware.soundtrigger@2.1-impl.so
+56b8d1822ac1d919faba3a09e457b2273c3624c8af10138d8e0f6766c416f424  proprietary/vendor/lib/vendor.samsung.hardware.audio@1.0.so
+3baf0f0c15ca7508e8f7c4a303f7620bb1255d4847b0d3c7f7278a56cee710e4  proprietary/vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
+668f9ef7eddb835c9e87037c520b8ab770528dfb4780b305276e67861735048e  proprietary/vendor/lib64/vendor.samsung.hardware.audio@1.0.so
+961f168fb36f07101d042b28a9b55c20011ea1a4eccb55033f5bf1173eeb66f3  proprietary/vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
