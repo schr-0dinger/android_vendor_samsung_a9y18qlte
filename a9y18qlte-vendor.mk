@@ -79,6 +79,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a9y18qlte/proprietary/lib/libmmrtpencoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmmrtpencoder.so \
     vendor/samsung/a9y18qlte/proprietary/lib/libomission_avoidance.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libomission_avoidance.so \
     vendor/samsung/a9y18qlte/proprietary/lib/libpacm_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libpacm_client.so \
+    vendor/samsung/a9y18qlte/proprietary/lib/android.hardware.radio@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/android.hardware.radio@1.0.so \
     vendor/samsung/a9y18qlte/proprietary/lib/libsecaudiocoreutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsecaudiocoreutils.so \
     vendor/samsung/a9y18qlte/proprietary/lib/libsecaudioeventutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsecaudioeventutils.so \
     vendor/samsung/a9y18qlte/proprietary/lib/libsecnativefeature.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsecnativefeature.so \
@@ -90,9 +91,12 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a9y18qlte/proprietary/lib64/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/fm_helium.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/libFileMux.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libFileMux.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/libaresdns.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaresdns.so \
+    vendor/samsung/a9y18qlte/proprietary/lib64/android.hardware.radio@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/android.hardware.radio@1.0.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaptX_encoder.so \
+    vendor/samsung/a9y18qlte/proprietary/lib64/libAudioTranscoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libAudioTranscoder.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/libcharon.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcharon.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/libcurl2.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcurl2.so \
+    vendor/samsung/a9y18qlte/proprietary/lib64/libevs_float.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libevs_float.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/liberis_charon.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/liberis_charon.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/liberis_simaka.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/liberis_simaka.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/liberis_strongswan.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/liberis_strongswan.so \
@@ -107,6 +111,9 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a9y18qlte/proprietary/lib64/libmmrtpencoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmmrtpencoder.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/libomission_avoidance.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libomission_avoidance.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/libpacm_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libpacm_client.so \
+    vendor/samsung/a9y18qlte/proprietary/lib64/libmediarelayengine.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmediarelayengine.so \
+    vendor/samsung/a9y18qlte/proprietary/lib64/libresampler_ims.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libresampler_ims.so \
+    vendor/samsung/a9y18qlte/proprietary/lib64/libSRTP.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libSRTP.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/libsec-ims.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsec-ims.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/libsecaudiocoreutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsecaudiocoreutils.so \
     vendor/samsung/a9y18qlte/proprietary/lib64/libsecaudioeventutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsecaudioeventutils.so \
@@ -170,6 +177,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/a9y18qlte/proprietary/vendor/bin/hdcp2p2prov:$(TARGET_COPY_OUT_VENDOR)/bin/hdcp2p2prov \
     vendor/samsung/a9y18qlte/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
     vendor/samsung/a9y18qlte/proprietary/vendor/bin/hw/android.hardware.audio@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.audio@2.0-service \
+    vendor/samsung/a9y18qlte/proprietary/vendor/etc/init/android.hardware.audio@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.audio@2.0-service.rc \
     vendor/samsung/a9y18qlte/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
     vendor/samsung/a9y18qlte/proprietary/vendor/bin/hw/android.hardware.usb@1.1-service.wahoo:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.usb@1.1-service.wahoo \
     vendor/samsung/a9y18qlte/proprietary/vendor/bin/hw/android.hardware.drm@1.2-service.widevine:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.drm@1.2-service.widevine \
