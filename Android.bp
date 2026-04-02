@@ -123,6 +123,21 @@ android_app_import {
 }
 
 android_app_import {
+	name: "OpenCamera",
+	owner: "samsung",
+	apk: "proprietary/app/OpenCamera.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	overrides: [
+		"Camera2",
+		"Snap",
+		"Aperture",
+	],
+}
+
+android_app_import {
 	name: "ImsTelephonyService",
 	owner: "samsung",
 	apk: "proprietary/priv-app/ImsTelephonyService/ImsTelephonyService.apk",
