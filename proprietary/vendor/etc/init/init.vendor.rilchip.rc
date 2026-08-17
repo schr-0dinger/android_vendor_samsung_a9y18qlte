@@ -10,8 +10,15 @@ service ril-daemon /vendor/bin/hw/rild -l ${vendor.sec.rild.libpath}
     group radio cache inet misc audio log oem_2901 system drmrpc vpn readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW SYS_ADMIN CHOWN SYS_TIME
     socket sap_uim_socket1 stream 660 bluetooth bluetooth
+    interface android.hardware.radio@1.0::IRadio slot1
+    interface android.hardware.radio@1.1::IRadio slot1
+    interface android.hardware.radio@1.2::IRadio slot1
+    interface android.hardware.radio@1.3::IRadio slot1
     interface android.hardware.radio@1.4::IRadio slot1
+    interface android.hardware.radio@1.0::ISap slot1
+    interface android.hardware.radio@1.1::ISap slot1
     interface android.hardware.radio@1.2::ISap slot1
+    interface android.hardware.radio.config@1.0::IRadioConfig default
     interface android.hardware.radio.config@1.1::IRadioConfig default
 
 service ril-daemon1 /vendor/bin/hw/rild -c 2 -l ${vendor.sec.rild.libpath2}
@@ -19,7 +26,13 @@ service ril-daemon1 /vendor/bin/hw/rild -c 2 -l ${vendor.sec.rild.libpath2}
     user radio
     group radio cache inet misc audio log oem_2901 system drmrpc vpn readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW SYS_ADMIN CHOWN SYS_TIME
+    interface android.hardware.radio@1.0::IRadio slot2
+    interface android.hardware.radio@1.1::IRadio slot2
+    interface android.hardware.radio@1.2::IRadio slot2
+    interface android.hardware.radio@1.3::IRadio slot2
     interface android.hardware.radio@1.4::IRadio slot2
+    interface android.hardware.radio@1.0::ISap slot2
+    interface android.hardware.radio@1.1::ISap slot2
     interface android.hardware.radio@1.2::ISap slot2
 
 # QMUX must be in multiple groups to support external process connections
