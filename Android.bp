@@ -89,6 +89,18 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
 	name: "libgpustats",
+	shared_libs: [
+		"libc",
+		"libc++",
+		"libcutils",
+		"libdl",
+		"liblog",
+		"libm",
+		"libutils",
+	],
+	// libCB, libgsl not soong module(s); they ship via
+	// PRODUCT_COPY_FILES, so soong cannot name them here.
+	check_elf_files: false,
 	owner: "samsung",
 	strip: {
 		none: true,
@@ -108,6 +120,18 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
 	name: "libsdm-disp-vndapis",
+	shared_libs: [
+		"libbinder",
+		"libc",
+		"libc++",
+		"libcutils",
+		"libdl",
+		"liblog",
+		"libm",
+		"libqservice",
+		"libsdmutils",
+		"libutils",
+	],
 	owner: "samsung",
 	strip: {
 		none: true,
@@ -127,6 +151,14 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
 	name: "libthermalclient",
+	shared_libs: [
+		"libc",
+		"libc++",
+		"libcutils",
+		"libdl",
+		"liblog",
+		"libm",
+	],
 	owner: "samsung",
 	strip: {
 		none: true,
