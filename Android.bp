@@ -22,6 +22,25 @@ soong_namespace {
 cc_prebuilt_library_shared {
 	name: "libsdm-disp-apis",
 	owner: "samsung",
+	// Android 12 checks that a prebuilt's DT_NEEDED entries are declared.
+	// These are the blob's real dependencies, taken from check_elf_files'
+	// own suggestion; libhidltransport and libhwbinder still exist in
+	// LineageOS 19.1 as shims kept for legacy vendor blobs like these.
+	shared_libs: [
+		"libc++",
+		"libcutils",
+		"libhidlbase",
+		"libhidltransport",
+		"liblog",
+		"libutils",
+	],
+	// vendor.display.color@1.0 is also a DT_NEEDED here, but it ships as a
+	// PRODUCT_COPY_FILES blob rather than a soong module, so it cannot be named
+	// in shared_libs. The remaining dependency is real, so the check is
+	// disabled rather than the dependency hidden - the linker still has to find
+	// vendor.display.color@1.0.so on device, where it is installed by
+	// proprietary-files.txt.
+	check_elf_files: false,
 	strip: {
 		none: true,
 	},
@@ -40,6 +59,19 @@ cc_prebuilt_library_shared {
 cc_prebuilt_library_shared {
 	name: "vendor.qti.hardware.fm@1.0",
 	owner: "samsung",
+	// Android 12 checks that a prebuilt's DT_NEEDED entries are declared.
+	// These are the blob's real dependencies, taken from check_elf_files'
+	// own suggestion; libhidltransport and libhwbinder still exist in
+	// LineageOS 19.1 as shims kept for legacy vendor blobs like these.
+	shared_libs: [
+		"libc++",
+		"libcutils",
+		"libhidlbase",
+		"libhidltransport",
+		"libhwbinder",
+		"liblog",
+		"libutils",
+	],
 	strip: {
 		none: true,
 	},
