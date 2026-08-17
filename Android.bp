@@ -128,10 +128,13 @@ cc_prebuilt_library_shared {
 		"libdl",
 		"liblog",
 		"libm",
-		"libqservice",
-		"libsdmutils",
 		"libutils",
 	],
+	// libqservice, libsdmutils are DT_NEEDED here but not resolvable modules for
+	// this target: libsdmutils exists only under hardware/qcom-caf/sm8350, and
+	// libqservice does not resolve from the msm8998 namespace this device
+	// imports. Both ship as blobs, so the runtime linker still finds them.
+	check_elf_files: false,
 	owner: "samsung",
 	strip: {
 		none: true,
