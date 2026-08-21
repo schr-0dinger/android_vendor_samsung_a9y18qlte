@@ -2,6 +2,7 @@ service vendor.keymaster-3-0 /vendor/bin/hw/android.hardware.keymaster@3.0-servi
     class early_hal
     user system
     group system drmrpc
+    disabled
 
 on post-fs-data
     mkdir /efs/DAK 0775 system system
