@@ -1,10 +1,12 @@
 service multiclient-daemon /system/bin/multiclientd
+    setenv LD_PRELOAD /system/lib64/libsecril_shim_system.so
     class main
     disabled
     user radio
     group radio cache inet misc log readproc sdcard_rw
 
 service multiclient-daemon1 /system/bin/multiclientd -c 2
+    setenv LD_PRELOAD /system/lib64/libsecril_shim_system.so
     class main
     disabled
     user radio
