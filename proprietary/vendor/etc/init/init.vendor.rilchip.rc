@@ -5,6 +5,7 @@
 #
 
 service ril-daemon /vendor/bin/hw/rild -l ${vendor.sec.rild.libpath}
+    setenv LD_PRELOAD /vendor/lib64/libsecril_shim.so
     class main
     user radio
     group radio cache inet misc audio log oem_2901 system drmrpc vpn readproc wakelock
@@ -22,6 +23,7 @@ service ril-daemon /vendor/bin/hw/rild -l ${vendor.sec.rild.libpath}
     interface android.hardware.radio.config@1.1::IRadioConfig default
 
 service ril-daemon1 /vendor/bin/hw/rild -c 2 -l ${vendor.sec.rild.libpath2}
+    setenv LD_PRELOAD /vendor/lib64/libsecril_shim.so
     class main
     user radio
     group radio cache inet misc audio log oem_2901 system drmrpc vpn readproc wakelock
